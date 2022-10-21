@@ -20,6 +20,6 @@ public class Item : MonoBehaviour
     }
 
     public void OnClick() {
-        popupMessage.Open("NameOfTexture","This is some text");
+        popupMessage.Open("NameOfTexture", "This is some text!!!!!!");
     }
 }

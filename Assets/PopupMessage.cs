@@ -20,7 +20,7 @@
     }
  
     public void Open(string inventoryStuffName, string message){
-        ui.SetActive (!ui.activeSelf);
+        ui.SetActive(!ui.activeSelf);
  
         if (ui.activeSelf) {
             if(!string.IsNullOrEmpty(inventoryStuffName)){
@@ -37,12 +37,12 @@
     }
     
     public void Close(){
-        ui.SetActive (!ui.activeSelf);
+        ui.SetActive(!ui.activeSelf);
         if (!ui.activeSelf) {
             Time.timeScale = 1f;
         } 
 
-        // picture.Open();
+        picture.Open();
      }
 
     //You need to have Folder Resources/InvenotryItems
