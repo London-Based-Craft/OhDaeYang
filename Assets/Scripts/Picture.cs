@@ -5,11 +5,13 @@ using UnityEngine;
 public class Picture : MonoBehaviour
 {
     public GameObject ui;
+    // private AudioSource source;
 
     // Start is called before the first frame update
     void Start()
     {
         ui.SetActive(false);
+        // source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public string imageName;
+    public string message;
+
     PopupMessage popupMessage;
-    GameObject popupController; 
+    GameObject popupController;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +22,8 @@ public class Item : MonoBehaviour
     {   
     }
 
-    public void OnClick() {
-        popupMessage.Open("NameOfTexture", "This is some text!!!!!!");
+    public void OnClick()
+    {
+        popupMessage.Open(imageName, message);
     }
 }

@@ -11,6 +11,7 @@
  
     // Use this for initialization
     void Start () {
+        ui.SetActive(false);
         pictureController = GameObject.Find("PictureController");
         picture = pictureController.GetComponent<Picture> ();
     }
@@ -19,12 +20,12 @@
     void Update () {
     }
  
-    public void Open(string inventoryStuffName, string message){
+    public void Open(string itemImageName, string message) {
         ui.SetActive(!ui.activeSelf);
  
         if (ui.activeSelf) {
-            if(!string.IsNullOrEmpty(inventoryStuffName)){
-                var texture = TakeInvenotryCollecition (inventoryStuffName);
+            if(!string.IsNullOrEmpty(itemImageName)){
+                var texture = TakeItem (itemImageName);
                 RawImage rawImage = ui.gameObject.GetComponentInChildren<RawImage>();
                 rawImage.texture = texture;
             }
@@ -36,7 +37,7 @@
         } 
     }
     
-    public void Close(){
+    public void Close() {
         ui.SetActive(!ui.activeSelf);
         if (!ui.activeSelf) {
             Time.timeScale = 1f;
@@ -45,10 +46,9 @@
         picture.Open();
      }
 
-    //You need to have Folder Resources/InvenotryItems
-    public Texture TakeInvenotryCollecition(string LoadCollectionsToInventory)
-    {
-        Texture loadedGO = Resources.Load("InvenotryItems/"+LoadCollectionsToInventory, typeof(Texture)) as Texture;
-        return loadedGO;
+    //You need to have Folder Resources/Items
+    public Texture TakeItem(string itemImageName) {
+        var loadedItem = Resources.Load<Texture2D>("Items/"+itemImageName);
+        return loadedItem;
     }
 }
