@@ -6,8 +6,10 @@ using UnityEngine.EventSystems;
 
 public class ItemProp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public string itemImage;
+    public string imageName;
     public string message;
+    public int imageWidth;
+    public int imageHeight;
 
     private UnityEngine.Events.UnityAction buttonCallback;
     Button button;
@@ -49,13 +51,13 @@ public class ItemProp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             button.onClick.RemoveListener( buttonCallback );
     
         // Define new callback
-        buttonCallback = () => OnClick_ShowPopup(itemImage, message);
+        buttonCallback = () => OnClick_ShowPopup();
         // Add callback to button
         button.onClick.AddListener( buttonCallback );
     }
 
-    void OnClick_ShowPopup(string imageName, string message)
+    void OnClick_ShowPopup()
     {
-        popupMessage.Open(imageName, message);
+        popupMessage.Open(imageName, message, imageWidth, imageHeight);
     }
 }

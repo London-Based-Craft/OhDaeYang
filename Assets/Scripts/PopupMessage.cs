@@ -20,7 +20,7 @@
     void Update () {
     }
  
-    public void Open(string itemImageName, string message) {
+    public void Open(string itemImageName, string message, int imageWidth, int imageHeight) {
         ui.SetActive(!ui.activeSelf);
  
         if (ui.activeSelf) {
@@ -28,6 +28,7 @@
                 var texture = TakeItem (itemImageName);
                 RawImage rawImage = ui.gameObject.GetComponentInChildren<RawImage>();
                 rawImage.texture = texture;
+                //rawImage.rectTransform.sizeDelta = new Vector2(100, 100);
             }
             if (!string.IsNullOrEmpty (message)) {
                 Text textObject = ui.gameObject.GetComponentInChildren<Text> ();
