@@ -16,6 +16,7 @@ public class TextChanges : MonoBehaviour
     void Start()
     {
         ScriptTxt = GetComponent<TextMeshProUGUI>();
+        ScriptsTxt.text = "";
 
         theSourceFile = new FileInfo (Application.dataPath + "/Resources/Scripts" + "/" + "Intro.txt");
         reader = theSourceFile.OpenText();
