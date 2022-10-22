@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e349b4d94be840969a5f4fe20dc0013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: 
+  imageName: Stick
   message: doll
   imageWidth: 0
   imageHeight: 0
@@ -893,7 +893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e349b4d94be840969a5f4fe20dc0013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: 
+  imageName: ToiletPaper
   message: doll
   imageWidth: 0
   imageHeight: 0
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e349b4d94be840969a5f4fe20dc0013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: 
+  imageName: duck_cut
   message: doll
   imageWidth: 0
   imageHeight: 0
@@ -1598,7 +1598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e349b4d94be840969a5f4fe20dc0013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: 
+  imageName: Memo
   message: doll
   imageWidth: 0
   imageHeight: 0
@@ -2902,7 +2902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1131, y: 248}
+  m_AnchoredPosition: {x: -295, y: 248}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1587303797
@@ -3204,7 +3204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e349b4d94be840969a5f4fe20dc0013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: 
+  imageName: doll
   message: doll
   imageWidth: 0
   imageHeight: 0
@@ -3381,7 +3381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e349b4d94be840969a5f4fe20dc0013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: 
+  imageName: Underwear
   message: doll
   imageWidth: 0
   imageHeight: 0
@@ -4192,7 +4192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e349b4d94be840969a5f4fe20dc0013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageName: 
+  imageName: Drawing
   message: doll
   imageWidth: 0
   imageHeight: 0

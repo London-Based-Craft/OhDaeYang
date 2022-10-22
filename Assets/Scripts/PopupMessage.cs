@@ -7,7 +7,6 @@
     public GameObject ui;
     Picture picture;
     GameObject pictureController;
-
  
     // Use this for initialization
     void Start () {
@@ -28,7 +27,7 @@
                 var texture = TakeItem (itemImageName);
                 RawImage rawImage = ui.gameObject.GetComponentInChildren<RawImage>();
                 rawImage.texture = texture;
-                //rawImage.rectTransform.sizeDelta = new Vector2(100, 100);
+                rawImage.GetComponentInParent<RectTransform>().sizeDelta = new Vector2(imageWidth, imageHeight);
             }
             if (!string.IsNullOrEmpty (message)) {
                 Text textObject = ui.gameObject.GetComponentInChildren<Text> ();
