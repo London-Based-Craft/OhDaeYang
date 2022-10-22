@@ -59,5 +59,7 @@ public class ItemProp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     void OnClick_ShowPopup()
     {
         popupMessage.Open(imageName, message, imageWidth, imageHeight);
+        var image = this.gameObject.GetComponent<Image>();
+        image.color = new Color32(255,255,255,255);
     }
 }
