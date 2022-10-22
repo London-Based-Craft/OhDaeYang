@@ -10,6 +10,4 @@ public class ChangeCursor : MonoBehaviour
     {
         Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
     }
-
-
 }
