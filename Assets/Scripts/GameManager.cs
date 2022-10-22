@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
 public class GameManager : MonoBehaviour
 {
     public AudioClip playBGM;
@@ -25,7 +24,9 @@ public class GameManager : MonoBehaviour
 
     public void OnClickStartButton(){
         // CoverImage.SetActive(false);
-        SceneManager.LoadScene("MainScene");
+        Variables.scriptType = ScriptType.Intro;
+        SceneManager.LoadScene("ScriptScene");
+    
         // GetComponent<AudioSource>().clip = playBGM;
         // GetComponent<AudioSource>().Play();
     }

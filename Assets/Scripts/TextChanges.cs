@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TextChanges : MonoBehaviour
 {
@@ -16,9 +17,10 @@ public class TextChanges : MonoBehaviour
     void Start()
     {
         ScriptTxt = GetComponent<TextMeshProUGUI>();
-        ScriptsTxt.text = "";
+        ScriptTxt.text = "";
 
-        theSourceFile = new FileInfo (Application.dataPath + "/Resources/Scripts" + "/" + "Intro.txt");
+        string type = Variables.scriptType.ToDescription();
+        theSourceFile = new FileInfo (Application.dataPath + "/Resources/Scripts" + "/" + type);
         reader = theSourceFile.OpenText();
     }
     
@@ -31,8 +33,9 @@ public class TextChanges : MonoBehaviour
             text = reader.ReadLine();
             //Console.WriteLine(text);
             ScriptTxt.text = text;
-
-            print (text);
+           } else {
+               // CoverImage.SetActive(false);
+             SceneManager.LoadScene("MainScene");
            }
         }
     }
