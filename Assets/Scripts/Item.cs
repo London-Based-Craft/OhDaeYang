@@ -2,28 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+[CreateAssetMenu(fileName = "New_Item", menuName = "Item")]
+public class Item : ScriptableObject
 {
-    public string imageName;
-    public string message;
+    public string title;
+    public string mesage;
+    public Sprite image;
 
-    PopupMessage popupMessage;
-    GameObject popupController;
-
-    // Start is called before the first frame update
-    void Start()
-    {   
-        popupController = GameObject.Find("PopupController");
-        popupMessage = popupController.GetComponent<PopupMessage> ();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {   
-    }
-
-    public void OnClick()
-    {
-        popupMessage.Open(imageName, message);
-    }
+    [TextArea(3,5)]
+    public string description;
 }
