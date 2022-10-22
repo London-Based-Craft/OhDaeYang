@@ -8,11 +8,10 @@ public class DragCamera : MonoBehaviour
     private Camera cam;
     private Vector3 dragORigin;
 
-    [SerializeField] Vector2 minCameraBoundary;
-    [SerializeField] Vector2 maxCameraBoundary;
+    public float leftLimit;
+    public float rightLimit;
     
-
-   private void Update ()
+    private void Update ()
     {
         PanCamera();
     }
@@ -24,16 +23,20 @@ public class DragCamera : MonoBehaviour
         if(Input.GetMouseButton(0)){
             Vector3 difference = dragORigin - cam.ScreenToWorldPoint(Input.mousePosition);            
             difference.y = 0;
-            print("origin"+ dragORigin + "newPosition " + cam.ScreenToWorldPoint(Input.mousePosition) + "=difference " + difference);
+            // print("origin"+ dragORigin + "newPosition " + cam.ScreenToWorldPoint(Input.mousePosition) + "=difference " + difference);
             // print("difference.x"+ difference.x + "difference.y " + difference.y);
 
-        //  Vector3 targetPos = new Vector3(player.position.x, player.position.y, this.transform.position.z);
+            // Vector3 targetPos = new Vector3(cam.transform.position.x, cam.transform.position.y, this.transform.position.z);
 
-        // targetPos.x = Mathf.Clamp(targetPos.x, minCameraBoundary.x, maxCameraBoundary.x);
-        // targetPos.y = Mathf.Clamp(targetPos.y, minCameraBoundary.y, maxCameraBoundary.y);
             cam.transform.position += difference;
+            cam.transform.position = new Vector3
+            (
+                Mathf.Clamp(cam.transform.position.x, leftLimit, rightLimit),
+                cam.transform.position.y,
+                cam.transform.position.z
+            );
+            // targetPos.x = Mathf.Clamp(targetPos.x, minCameraBoundary.x, maxCameraBoundary.x);
+            // targetPos.y = Mathf.Clamp(targetPos.y, minCameraBoundary.y, maxCameraBoundary.y);
         }
     }
-
- 
 }
