@@ -9,14 +9,26 @@ public class Picture : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ui.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        HideIfClickedOutside();
     }
 
-    public void Open(string inventoryStuffName, string message){
-        ui.SetActive (!ui.activeSelf);
+    private void HideIfClickedOutside() {
+        if (Input.GetMouseButton(0) && ui.activeSelf &&
+            !RectTransformUtility.RectangleContainsScreenPoint(
+                ui.GetComponent<RectTransform>(),
+                Input.mousePosition,
+                Camera.main)) {
+            ui.SetActive(false);
+        }
+    }
+
+    public void Open(){
+        ui.SetActive(true);
     }
 }
