@@ -22,9 +22,7 @@ public class DragCamera : MonoBehaviour
             dragORigin = cam.ScreenToWorldPoint(Input.mousePosition);
         }
         if(Input.GetMouseButton(0)){
-            Vector3 difference = dragORigin - cam.ScreenToWorldPoint(Input.mousePosition);
-            
-            // difference.x = Mathf.Clamp(difference.x, minCameraBoundary.x, maxCameraBoundary.x);
+            Vector3 difference = dragORigin - cam.ScreenToWorldPoint(Input.mousePosition);            
             difference.y = 0;
             print("origin"+ dragORigin + "newPosition " + cam.ScreenToWorldPoint(Input.mousePosition) + "=difference " + difference);
             // print("difference.x"+ difference.x + "difference.y " + difference.y);
