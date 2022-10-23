@@ -35,7 +35,7 @@ public class ItemProp : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
-        Debug.Log(pointerEventData + imageName + "play");
+        // Debug.Log(pointerEventData + imageName + "play");
         source.Play();
     }
 

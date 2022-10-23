@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ZoomIn : MonoBehaviour
 {
-    
     public GameObject report;
+    int count = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -18,21 +18,21 @@ public class ZoomIn : MonoBehaviour
     {
          if (Input.GetMouseButtonDown(0))
         {
-           clickIDCard();
+           click();
         }
     }
-    int count = 0;
-    public void clickIDCard()
+    
+    public void click()
     {
         RectTransform rectTran = gameObject.GetComponent<RectTransform>();
-        GameObject obj = GameObject.Find("timesContents");
-        Vector3 position = obj.transform.localPosition;
+        // GameObject obj = GameObject.Find("report");
+        // Vector3 position = obj.transform.localPosition;
         if (count == 0) {
-            rectTran.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 991);
-            rectTran.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 1305);
-            position.x =394;
-            position.y = 501;
-            obj.transform.localPosition = position;
+            // rectTran.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 991);
+            // rectTran.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 1305);
+            // position.x =394;
+            // position.y = 501;
+            // obj.transform.localPosition = position;
             count++;
         } else if( count == 1 ){
             report.SetActive(true);
