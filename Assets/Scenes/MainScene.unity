@@ -177,7 +177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: pills
-  message: doll
+  message: It was suffocatingly hot. We took the tranquillizer. There is no use resisting
+    anymore.
   imageWidth: 250
   imageHeight: 120
   material: {fileID: 0}
@@ -577,7 +578,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: Memo
-  message: doll
+  message: "\u201CShe is unconscious.\u201D \u2026 I have the feeling I should run.
+    But where?"
   imageWidth: 700
   imageHeight: 700
   material: {fileID: 0}
@@ -813,7 +815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: ramen
-  message: doll
+  message: We have not eaten since yesterday. Seems like everyone lost their appetite.
   imageWidth: 280
   imageHeight: 150
   material: {fileID: 0}
@@ -1145,7 +1147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: photo
-  message: 
+  message: I recognize these faces...
   imageWidth: 240
   imageHeight: 240
   material: {fileID: 0}
@@ -1386,7 +1388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: ToiletPaper
-  message: doll
+  message: "We were asked to block our mouth and nose. This was the only way to salvation,
+    she said. It\u2019s hard to breathe\u2026"
   imageWidth: 600
   imageHeight: 600
   material: {fileID: 0}
@@ -1622,7 +1625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: rope_whole
-  message: doll
+  message: "She said this is the only escape\u2026"
   imageWidth: 80
   imageHeight: 300
   material: {fileID: 0}
@@ -2091,7 +2094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: duck_whole
-  message: doll
+  message: Why are so many toys in this room? Who played with them?
   imageWidth: 500
   imageHeight: 500
   material: {fileID: 0}
@@ -2327,7 +2330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: Stick
-  message: doll
+  message: "I vaguely remember\u2026 someone used this to hit people. It was brutal,
+    people cried for help but\u2026"
   imageWidth: 350
   imageHeight: 350
   material: {fileID: 0}
@@ -2631,7 +2635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: Drawing
-  message: doll
+  message: Why would a child draw this?
   imageWidth: 500
   imageHeight: 500
   material: {fileID: 0}
@@ -2955,7 +2959,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: bankbook
-  message: doll
+  message: Not even a penny in this bank account. Tremendous amount of debt. We will
+    go bankrupt eventually.
   imageWidth: 200
   imageHeight: 200
   material: {fileID: 0}
@@ -3614,7 +3619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: UnderwearFull
-  message: doll
+  message: "It\u2019s too hot. Where are the rest of my clothes? I can\u2019t breathe- "
   imageWidth: 600
   imageHeight: 600
   material: {fileID: 0}
@@ -3850,7 +3855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imageName: doll
-  message: doll
+  message: "The\_old doll looks like it had lived a life so full."
   imageWidth: 300
   imageHeight: 300
   material: {fileID: 0}
@@ -4800,7 +4805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &8719189090403998126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5038,7 +5043,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is some texts.
+  m_Text: 'This is some texts. This is some texts. This is some texts. This is some
+    texts. '
 --- !u!224 &8719189091005103558
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5057,7 +5063,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.2, y: -90}
-  m_SizeDelta: {x: 200, y: 100}
+  m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8719189091005103559
 GameObject:
