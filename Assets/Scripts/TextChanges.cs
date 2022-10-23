@@ -9,9 +9,10 @@ using UnityEngine.SceneManagement;
 public class TextChanges : MonoBehaviour
 {
     public TextMeshProUGUI ScriptTxt;
-    string[] IntroScript = new string[] { ".....", "Where am I?", "Spider Man" };
-    protected FileInfo theSourceFile = null;
-    protected StreamReader reader = null;
+    protected TextAsset theSourceFile = null;
+    protected TextReader txtReader = null;
+    protected string[] textByLine;
+
     protected string text = " "; // assigned to allow first line to be read below
  
     void Start()
@@ -20,8 +21,10 @@ public class TextChanges : MonoBehaviour
         ScriptTxt.text = "";
 
         string type = Variables.scriptType.ToDescription();
-        theSourceFile = new FileInfo (Application.dataPath + "/Resources/Scripts" + "/" + type);
-        reader = theSourceFile.OpenText();
+        theSourceFile = Resources.Load("Scripts/" + type) as TextAsset;//new FileInfo (Application.dataPath + "/Resources/Scripts" + "/" + type);
+        string str = theSourceFile.text;
+        txtReader =  new StringReader(str);
+
     }
     
     // Update is called once per frame
@@ -30,7 +33,7 @@ public class TextChanges : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if (text != null) {
-            text = reader.ReadLine();
+            text = txtReader.ReadLine();
             //Console.WriteLine(text);
             ScriptTxt.text = text;
            } else {

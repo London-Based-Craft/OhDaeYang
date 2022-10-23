@@ -1,14 +1,14 @@
 using System.ComponentModel; 
 
 public enum ScriptType{
-    [Description("Intro.txt")] 
+    [Description("Intro")] 
     Intro,
-    [Description("Bathroom.txt")]     
+    [Description("Bathroom")]     
     Bathroom, 
-    [Description("Factory.txt")] 
+    [Description("Factory")] 
     Factory, 
-    [Description("Office.txt")] 
+    [Description("Office")] 
     Office, 
-    [Description("Toyroom.txt")] 
+    [Description("Toyroom")] 
     Toyroom
 }
